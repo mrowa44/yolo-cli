@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Drop & migrate local database easily",
   "repository": "mrowa44/yolo",
-  "keywords": ["yolo"],
+  "keywords": [
+    "yolo"
+  ],
   "main": "index.js",
+  "pre-push": "test",
   "scripts": {
     "test": "eslint ."
   },
@@ -23,6 +26,7 @@
   },
   "devDependencies": {
     "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^11.1.2"
+    "eslint-config-airbnb-base": "^11.1.2",
+    "pre-push": "^0.1.1"
   }
 }
