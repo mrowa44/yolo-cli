@@ -2,7 +2,7 @@
   "name": "yolo-cli",
   "version": "1.0.1",
   "description": "Drop & migrate local database easily",
-  "repository": "mrowa44/yolo",
+  "repository": "mrowa44/yolo-cli",
   "license": "MIT",
   "author": {
     "name": "Justyna Rachowicz",
