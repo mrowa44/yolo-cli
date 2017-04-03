@@ -1,0 +1,5 @@
+{
+  "drop": "echo 'drop' && sleep 2",
+  "build": "echo 'build' && sleep 3",
+  "post": "echo 'post' && sleep 2"
+}
