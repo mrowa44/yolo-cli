@@ -9,8 +9,16 @@
     "email": "mrowa44+yolo@gmail.com"
   },
   "keywords": [
-    "yolo"
+    "yolo",
+    "database",
+    "cli",
+    "util",
+    "utility",
+    "development"
   ],
+  "engines": {
+    "node": ">=4"
+  },
   "main": "index.js",
   "pre-push": "lint",
   "scripts": {

@@ -1,3 +1,5 @@
+'use strict';
+
 const exec = require('child-process-promise').exec;
 const findUp = require('find-up');
 const ora = require('ora');
