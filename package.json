@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "child-process-promise": "^2.2.1",
-    "find-up": "^2.1.0"
+    "find-up": "^2.1.0",
+    "ora": "^1.2.0"
   }
 }

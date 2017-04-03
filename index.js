@@ -1,24 +1,31 @@
 const exec = require('child-process-promise').exec;
 const findUp = require('find-up');
+const ora = require('ora');
 
 const CONFIG_NAME = 'yolo.json';
+
+const spinner = ora('Preparing...').start();
 
 let config;
 
 findUp(CONFIG_NAME)
   .then((path) => {
     config = require(path);
-    console.log('Dropping');
+    spinner.color = 'red';
+    spinner.text = 'Dropping database...';
     return exec(config.drop);
   })
   .then(() => {
-    console.log('building');
+    spinner.color = 'yellow';
+    spinner.text = 'Building database...';
     return exec(config.build);
   })
   .then(() => {
-    console.log('post build');
+    spinner.color = 'green';
+    spinner.text = 'Migrating database...';
     return exec(config.post);
   })
-  .then(() => {
-    console.log('success');
+  .then(() => spinner.succeed('Successfully dropped and created database!'))
+  .catch((error) => {
+    spinner.fail(error.message);
   });
