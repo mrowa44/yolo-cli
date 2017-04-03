@@ -1,5 +1,5 @@
 {
-  "name": "yolo",
+  "name": "yolo-cli",
   "version": "1.0.0",
   "description": "Drop & migrate local database easily",
   "repository": "mrowa44/yolo",
@@ -17,7 +17,9 @@
     "test": "eslint .",
     "lint": "eslint ."
   },
-  "bin": "bin/yolo",
+  "bin": {
+    "yolo": "bin/yolo"
+  },
   "dependencies": {
     "child-process-promise": "^2.2.1",
     "find-up": "^2.1.0",
