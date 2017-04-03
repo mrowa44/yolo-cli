@@ -17,9 +17,7 @@
     "test": "eslint .",
     "lint": "eslint ."
   },
-  "bin": {
-    "yolo": "bin/yolo"
-  },
+  "bin": "bin/yolo",
   "dependencies": {
     "child-process-promise": "^2.2.1",
     "find-up": "^2.1.0",
