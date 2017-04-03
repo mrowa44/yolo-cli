@@ -34,7 +34,7 @@ Example `yolo.json`
 
 ```
 
-And run `yolo` in any project directory.
+And run `yolo` in any directory of a project.
 
 
 Installation
