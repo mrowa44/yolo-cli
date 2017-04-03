@@ -1,19 +1,28 @@
 {
-  "name": "y",
+  "name": "yolo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Drop & migrate local database easily",
+  "repository": "mrowa44/yolo",
+  "keywords": ["yolo"],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint ."
   },
-  "keywords": [
-    "yolo"
-  ],
-  "author": "Justyna Rachowicz",
-  "license": "ISC",
+  "bin": {
+    "yolo": "bin/yolo"
+  },
+  "author": {
+    "name": "Justyna Rachowicz",
+    "email": "mrowa44+yolo@gmail.com"
+  },
+  "license": "MIT",
   "dependencies": {
     "child-process-promise": "^2.2.1",
     "find-up": "^2.1.0",
     "ora": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.2"
   }
 }
