@@ -46,4 +46,4 @@ npm -g install yolo-cli
 
 License
 -------
-MIT © Justyna Rachowicz
+MIT © [Justyna Rachowicz](https://github.com/mrowa44)
