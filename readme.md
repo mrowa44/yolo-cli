@@ -23,12 +23,21 @@ current folder and run defined commands in sequence.
 
 And it's pretty :sparkles:
 
+
+Installation
+------------
+```bash
+npm -g install yolo-cli
+```
+
+
 Usage
 -----
 Run `yolo init` in project root to initialize example `yolo.json` file and fill
 it with proper commands.
 
 Then you can run `yolo` in any project directory to rebuild database.
+
 
 Example `yolo.json`
 ------------------
@@ -39,12 +48,6 @@ Example `yolo.json`
   "post": "sequelize db:migrate"
 }
 
-```
-
-Installation
-------------
-```bash
-npm -g install yolo-cli
 ```
 
 
