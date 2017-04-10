@@ -31,6 +31,7 @@
   "dependencies": {
     "child-process-promise": "^2.2.1",
     "find-up": "^2.1.0",
+    "fs-promise": "^2.0.2",
     "ora": "^1.2.0"
   },
   "devDependencies": {
