@@ -15,8 +15,7 @@ function initialize() {
 
   spinner.text = 'Checking if file exists...';
   if (fs.existsSync(configPath)) {
-    spinner.fail(`${CONFIG_NAME} already exists!`);
-    return null;
+    return spinner.fail(`${CONFIG_NAME} already exists!`);
   }
 
   spinner.text = `Creating ${CONFIG_NAME} file...`;
