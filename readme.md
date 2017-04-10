@@ -23,6 +23,13 @@ current folder and run defined commands in sequence.
 
 And it's pretty :sparkles:
 
+Usage
+-----
+Run `yolo init` in project root to initialize example `yolo.json` file and fill
+it with proper commands.
+
+Then you can run `yolo` in any project directory to rebuild database.
+
 Example `yolo.json`
 ------------------
 ```json
@@ -33,9 +40,6 @@ Example `yolo.json`
 }
 
 ```
-
-And run `yolo` in any directory of a project.
-
 
 Installation
 ------------
