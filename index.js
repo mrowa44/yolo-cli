@@ -1,5 +1,6 @@
 'use strict';
 
+const path = require('path');
 const fs = require('fs');
 const fsp = require('fs-promise');
 const findUp = require('find-up');
@@ -11,7 +12,7 @@ const CONFIG_NAME = 'yolo.json';
 function initialize() {
   const spinner = ora().start();
   const configPath = `./${CONFIG_NAME}`;
-  const examplePath = `${__dirname}/${CONFIG_NAME}.example`;
+  const examplePath = path.resolve(__dirname, `${CONFIG_NAME}.example`);
 
   spinner.text = 'Checking if file exists...';
   if (fs.existsSync(configPath)) {
@@ -29,8 +30,8 @@ function yolo() {
   let config;
 
   return findUp(CONFIG_NAME)
-    .then((path) => {
-      config = require(path);
+    .then((configPath) => {
+      config = require(configPath);
       spinner.color = 'red';
       spinner.text = 'Dropping database...';
       return exec(config.drop);
