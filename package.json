@@ -1,6 +1,6 @@
 {
   "name": "yolo-cli",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Drop & migrate local database easily",
   "repository": "mrowa44/yolo-cli",
   "license": "MIT",
