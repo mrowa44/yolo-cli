@@ -22,7 +22,8 @@
   "main": "index.js",
   "pre-push": "lint",
   "scripts": {
-    "test": "eslint .",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "lint": "eslint ."
   },
   "bin": {
@@ -38,6 +39,7 @@
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.1.2",
     "eslint-plugin-import": "^2.2.0",
+    "jest": "^22.0.4",
     "pre-push": "^0.1.1"
   }
 }
