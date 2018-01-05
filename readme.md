@@ -14,10 +14,10 @@ migrating from scratch, which requires a lot of commands. I would normally
 define an alias in my shell but that becomes a problem if I work on many
 projects.
 
-This package simplifies that by letting you define `yolo.json` file with
+This package simplifies that by letting you define `yolo.js` file with
 `drop`, `build` and `post` commands for each project.
 
-It will look for `yolo.json` in parent directories if one isn't present in
+It will look for `yolo.js` in parent directories if one isn't present in
 current folder and run defined commands in sequence.
 
 
@@ -33,20 +33,20 @@ npm -g install yolo-cli
 
 Usage
 -----
-Run `yolo init` in project root to initialize example `yolo.json` file and fill
+Run `yolo init` in project root to initialize example `yolo.js` file and fill
 it with proper commands.
 
 Then you can run `yolo` in any project directory to rebuild database.
 
 
-Example `yolo.json`
+Example `yolo.js`
 ------------------
-```json
-{
-  "drop": "dropdb yolo",
-  "build": "createdb yolo",
-  "post": "sequelize db:migrate"
-}
+```js
+module.exports = {
+  drop: 'dropdb yolo',
+  build: 'createdb yolo',
+  post: 'sequelize db:migrate',
+};
 
 ```
 
