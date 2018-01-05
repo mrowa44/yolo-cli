@@ -1,5 +1,8 @@
 module.exports = {
   extends: 'airbnb-base',
+  env: {
+    jest: true,
+  },
   rules: {
     'strict': 0,
     // needed for config file import

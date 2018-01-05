@@ -61,4 +61,5 @@ function yolo() {
 module.exports = {
   yolo,
   initialize,
+  dropDb,
 };
