@@ -25,6 +25,24 @@ function initialize() {
     .catch(error => spinner.fail(error.message));
 }
 
+function dropDb(spinner, command) {
+  spinner.color = 'red';
+  spinner.text = 'Dropping database...';
+  return exec(command);
+}
+
+function buildDb(spinner, command) {
+  spinner.color = 'yellow';
+  spinner.text = 'Building database...';
+  return exec(command);
+}
+
+function migrateDb(spinner, command) {
+  spinner.color = 'green';
+  spinner.text = 'Migrating database...';
+  return exec(command);
+}
+
 function yolo() {
   const spinner = ora('Preparing...').start();
   let config;
@@ -32,28 +50,15 @@ function yolo() {
   return findUp(CONFIG_NAME)
     .then((configPath) => {
       config = require(configPath);
-      spinner.color = 'red';
-      spinner.text = 'Dropping database...';
-      return exec(config.drop);
+      return dropDb(spinner, config.drop);
     })
-    .then(() => {
-      spinner.color = 'yellow';
-      spinner.text = 'Building database...';
-      return exec(config.build);
-    })
-    .then(() => {
-      spinner.color = 'green';
-      spinner.text = 'Migrating database...';
-      return exec(config.post);
-    })
+    .then(() => buildDb(spinner, config.build))
+    .then(() => migrateDb(spinner, config.post))
     .then(() => spinner.succeed('Successfully dropped and created database!'))
     .catch(error => spinner.fail(error.message));
 }
 
-module.exports = () => {
-  if (process.argv.includes('init')) {
-    return initialize();
-  }
-
-  return yolo();
+module.exports = {
+  yolo,
+  initialize,
 };

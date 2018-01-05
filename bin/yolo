@@ -1,3 +1,15 @@
 #!/usr/bin/env node
 
-require('../.')();
+const {
+  yolo,
+  initialize,
+} = require('../.');
+
+function run() {
+  if (process.argv.includes('init')) {
+    return initialize();
+  }
+  return yolo();
+}
+
+run();
