@@ -5,7 +5,7 @@ const fs = require('fs');
 const fsp = require('fs-promise');
 const findUp = require('find-up');
 const ora = require('ora');
-const exec = require('child-process-promise').exec;
+const { exec } = require('child-process-promise');
 
 const CONFIG_NAME = 'yolo.js';
 

@@ -18,11 +18,11 @@ describe('dropDb', () => {
   });
 
   test('executes drop command', () => {
-    const spy = jest.spyOn(childProcessPromise, 'exec');
+    childProcessPromise.exec = jest.fn();
     const command = 'echo';
     return dropDb({}, command)
       .then(() => {
-        expect(spy).toHaveBeenCalled();
+        expect(childProcessPromise.exec).toHaveBeenCalledWith({}, command);
       });
   });
 });
