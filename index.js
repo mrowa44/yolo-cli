@@ -7,7 +7,7 @@ const findUp = require('find-up');
 const ora = require('ora');
 const exec = require('child-process-promise').exec;
 
-const CONFIG_NAME = 'yolo.json';
+const CONFIG_NAME = 'yolo.js';
 
 function initialize() {
   const spinner = ora().start();
