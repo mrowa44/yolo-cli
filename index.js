@@ -5,7 +5,7 @@ const fs = require('fs');
 const fsp = require('fs-promise');
 const findUp = require('find-up');
 const ora = require('ora');
-const { exec } = require('child-process-promise');
+const childProcessPromise = require('child-process-promise');
 
 const CONFIG_NAME = 'yolo.js';
 
@@ -28,19 +28,19 @@ function initialize() {
 function dropDb(spinner, command) {
   spinner.color = 'red';
   spinner.text = 'Dropping database...';
-  return exec(command);
+  return childProcessPromise.exec(command);
 }
 
 function buildDb(spinner, command) {
   spinner.color = 'yellow';
   spinner.text = 'Building database...';
-  return exec(command);
+  return childProcessPromise.exec(command);
 }
 
 function migrateDb(spinner, command) {
   spinner.color = 'green';
   spinner.text = 'Migrating database...';
-  return exec(command);
+  return childProcessPromise.exec(command);
 }
 
 function yolo() {
@@ -59,7 +59,9 @@ function yolo() {
 }
 
 module.exports = {
-  yolo,
-  initialize,
+  buildDb,
   dropDb,
+  initialize,
+  migrateDb,
+  yolo,
 };

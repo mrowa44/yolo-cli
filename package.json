@@ -29,6 +29,11 @@
   "bin": {
     "yolo": "bin/yolo"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "yolo.js": "<rootDir>/__mocks__/yolo.js"
+    }
+  },
   "dependencies": {
     "child-process-promise": "^2.2.1",
     "find-up": "^2.1.0",
