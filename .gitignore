@@ -59,4 +59,5 @@ typings/
 
 # hehehehe
 yolo.json
-
+yolo.js
+!__mocks__/yolo.js
